@@ -1,6 +1,6 @@
 function ordina()
 {
-    location.assign("prenotazione.html");
+    location.assign("autenticazione.html");
 }
 
 function menu()
