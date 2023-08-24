@@ -119,4 +119,37 @@ h1{
      top: 65%;
      left: 15%;
   }
+
+  @media (max-width: 414px)
+  {
+    .image
+    {
+        visibility: hidden;
+    }
+
+    body{
+        background-image: url("img/WaitressOne.png");
+        /* Da rivedere */
+        background-position: top; 
+        overflow: hidden;
+        align-items: center;
+        
+    }
+
+    .box
+    {
+        position: relative;
+        top: 150px;
+        height: 68%;
+        width: 95%;
+        position: absolute;
+        right: 2.5%;
+    }
+
+    .logo
+    {
+        position: absolute;
+        left:60%;
+    }
+  }
   
