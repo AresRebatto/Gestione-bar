@@ -14,22 +14,24 @@
 <body>
     <a href="index.html"><img src="style/img/LogoWB.png" alt="" class="logo"></a>
     <div class="box">
-        <h1>Autenticazione</h1>
+        <h1 id="test">Autenticazione</h1>
         <!-- Input classe -->
         <div class="input-container classroom-container">
-            <input type="text" id="input" required="">
+            <input type="text" id="classe" class="classe" required="">
             <label for="input" class="label">Classe(es. 3H)</label>
             <div class="underline"></div>
         </div>
         <!-- Input password -->
         <div class="input-container password-container">
-        <input type="text" id="input" required="">
+        <input type="text" id="password" required="">
         <label for="input" class="label">Password</label>
         <div class="underline"></div>
         </div>
         <!-- Bottone invia -->
-        <button class="send">Invia</button>
+        <button class="send" onclick="send()">Invia</button>
     </div>
     <img src="style/img/WaitressOne.png" alt="waitress" class="image">
+
+    <script src="js/autenticazione.js"></script>
 </body>
 </html>

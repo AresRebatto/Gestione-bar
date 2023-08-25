@@ -2,6 +2,7 @@ body{
     background-image: url(img/BarImage.jpg);
     background-size: 100%;
     background-repeat: none;
+    overflow: hidden;
 }
 
 td{
@@ -23,10 +24,49 @@ td:hover
     bottom: 60px;
 }
 
-img{
-    opacity: 140%;
+.images{
+    position: relative;
+    left: 13%;
+    top: 8%;
+    border: 1px solid black;
 }
 
 .select{
     display: flex;
+    position: relative;
+    left: 35%;
+
+}
+
+.food{
+    font-family: 'Hind Vadodara', sans-serif; 
+    font-weight: 1000;
+    margin-bottom: -20px;
+    font-size: 23px;
+    position: relative;
+    left: 30%;
+}
+
+.prize{
+    font-family: 'Hind Vadodara', sans-serif; 
+    font-weight: 1000;
+    position: relative;
+    left: 40%;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    font-weight: 1000;
+    height: 30px;
+    position: relative;
+    top: 17px;
+}
+
+button:hover{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.qnt{
+    font-weight: 1000;
 }

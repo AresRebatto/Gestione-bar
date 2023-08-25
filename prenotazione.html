@@ -4,74 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/prenotazione.css">
-    <title>Prenotazione</title>
+    <title>Ordinazione</title>
+
+     <!-- fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Ancora da aggiungere logo per redirect home -->
     <table class="main-table"cellspacing="70" align="center" >
         <tr>
-            <td>
-                <img src="style/img/Focaccia.jpg" alt="" height="150">
-                <p>Focaccia</p>
-                <p>1.70€</p>
+            <td id="focaccia">
+                <img src="style/img/Focaccia.jpg" alt="" height="150" class="images">
+                <p class="food">Focaccia</p>
+                <p class="prize" id="FocacciaPrize">1.00€</p>
                 <div class="select">
-                    <button>-</button>
-                    <p>0</p>
+                    <button onclick="lessFocaccia()">-</button>
+                    <p class="qnt" id="qntFocaccia">0</p>
+                    <button>+</button>
+                </div>
+            </td>
+            <td id="HotDog">
+                <img src="style/img/HotDog.jpg" alt="" height="150" class="images">
+                <p class="food">Hot-Dog</p>
+                <p class="prize" id="HotDogPrize">1.70€</p>
+                <div class="select">
+                    <button onclick="lessHotDog()">-</button>
+                    <p class="qnt" id="qntHotDog">0</p>
                     <button>+</button>
                 </div>
             </td>
             <td>
-                <img src="style/img/Focaccia.jpg" alt="" height="150">
-                <p>Focaccia</p>
-                <p>1.70€</p>
+                <img src="style/img/Focaccia.jpg" alt="" height="150" class="images">
+                <p class="food">Focaccia</p>
+                <p class="prize">1.70€</p>
                 <div class="select">
                     <button>-</button>
-                    <p>0</p>
-                    <button>+</button>
-                </div>
-            </td>
-            <td>
-                <img src="style/img/Focaccia.jpg" alt="" height="150">
-                <p>Focaccia</p>
-                <p>1.70€</p>
-                <div class="select">
-                    <button>-</button>
-                    <p>0</p>
+                    <p class="qnt">0</p>
                     <button>+</button>
                 </div>
             </td>
         </tr>
         <tr>
             <td>
-                <img src="style/img/Focaccia.jpg" alt="" height="150">
-                <p>Focaccia</p>
-                <p>1.70€</p>
+                <img src="style/img/Focaccia.jpg" alt="" height="150" class="images">
+                <p class="food">Focaccia</p>
+                <p class="prize">1.70€</p>
                 <div class="select">
                     <button>-</button>
-                    <p>0</p>
+                    <p class="qnt">0</p>
                     <button>+</button>
                 </div>
             </td>
             <td>
-                <img src="style/img/Focaccia.jpg" alt="" height="150" align="center">
-                <p>Focaccia</p>
-                <p>1.70€</p>
+                <img src="style/img/Focaccia.jpg" alt="" height="150" class="images">
+                <p class="food">Focaccia</p>
+                <p class="prize">1.70€</p>
                 <div class="select">
                     <button>-</button>
-                    <p>0</p>
+                    <p class="qnt">0</p>
                     <button>+</button>
                 </div>
             </td>
             <td>
-                <img src="style/img/Focaccia.jpg" alt="" height="150">
-                <p>Focaccia</p>
-                <p>1.70€</p>
+                <img src="style/img/Focaccia.jpg" alt="" height="150" class="images">
+                <p class="food">Focaccia</p>
+                <p class="prize">1.70€</p>
                 <div class="select">
                     <button>-</button>
-                    <p>0</p>
+                    <p class="qnt">0</p>
                     <button>+</button>
                 </div>
             </td>
         </tr>
     </table>
+
+    <script src="js/ordinazione.js"></script>
 </body>
 </html>
