@@ -1,5 +1,5 @@
 body{
-    
+
     display: flex;
     justify-content: space-between;
     overflow: hidden;
@@ -14,7 +14,7 @@ body{
 }
 h1{
     color: white;
-    font-family:'Hind Vadodara', sans-serif;  
+    font-family:'Hind Vadodara', sans-serif;
     position: relative;
     top: 8%;
     left: 13%;
@@ -22,134 +22,149 @@ h1{
 
 .image
 {
-    width: 60%;
-    margin-top: -2%;
-    margin-right: -2%;
+  width: 60%;
+  margin-top: -2%;
+  margin-right: -2%;
 }
 
 .box
 {
-    background: linear-gradient(115deg, #3F2A21 0%, #4d220e 100%);
-    width: 100%;
-    height: 1000px;
-    margin-top: -2%;
-    margin-left: -0.5%;
+  background: linear-gradient(115deg, #3F2A21 0%, #4d220e 100%);
+  width: 100%;
+  height: 1000px;
+  margin-top: -2%;
+  margin-left: -0.5%;
 }
 .input-container {
+  position: relative;
+  margin: 50px auto;
+}
+
+.classroom-container{
+  width: 200px;
+  left: -22%;
+  top: 12%;
+}
+
+.password-container{
+  width: 300px;
+  left: -15%;
+  top: 16%;
+}
+
+.input-container input[type="text"] {
+  font-size: 20px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #fff;
+  padding: 5px 0;
+  background-color: transparent;
+  outline: none;
+  position: relative;
+}
+
+.input-container .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.input-container input[type="text"]:focus ~ .label,
+.input-container input[type="text"]:valid ~ .label {
+  top: -20px;
+  font-size: 16px;
+  color: #e5e5e5;
+}
+
+#classe, #password
+{
+  color: white;
+  font-family:'Hind Vadodara', sans-serif;
+}
+
+label
+{
+  font-family:'Hind Vadodara', sans-serif;
+}
+
+.input-container .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #e5e5e5;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.input-container input[type="text"]:focus ~ .underline,
+.input-container input[type="text"]:valid ~ .underline {
+  transform: scaleX(1);
+}
+
+.send
+{
+  font-family:'Hind Vadodara', sans-serif;
+  background-color: transparent;
+  border: solid 1px white;
+  color: white;
+  font-size: 30px;
+  width: 160px;
+  height: 55px;
+  position: absolute;
+  top: 65%;
+  left: 15%;
+}
+
+.send:hover
+{
+  background-color: white;
+  color: black;
+  transition: 0.2s;
+}
+
+.qnt{
+  font-weight: 1000;
+}
+
+
+
+
+@media (max-width: 414px)
+{
+  .image
+  {
+    visibility: hidden;
+  }
+
+  body{
+    background-image: url("img/WaitressOne.png");
+    /* Da rivedere */
+    background-position: top;
+    overflow: hidden;
+    align-items: center;
+
+  }
+
+  .box
+  {
     position: relative;
-    margin: 50px auto;
-  }
-
-  .classroom-container{
-    width: 200px;
-    left: -22%;
-    top: 12%;
-  }
-
-  .password-container{
-    width: 300px;
-    left: -15%;
-    top: 16%;
-  }
-  
-  .input-container input[type="text"] {
-    font-size: 20px;
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #fff;
-    padding: 5px 0;
-    background-color: transparent;
-    outline: none;
-    position: relative;
-  }
-  
-  .input-container .label {
+    top: 150px;
+    height: 68%;
+    width: 95%;
     position: absolute;
-    top: 0;
-    left: 0;
-    color: #fff;
-    transition: all 0.3s ease;
-    pointer-events: none;
-  }
-  
-  .input-container input[type="text"]:focus ~ .label,
-  .input-container input[type="text"]:valid ~ .label {
-    top: -20px;
-    font-size: 16px;
-    color: #e5e5e5;
+    right: 2.5%;
   }
 
-  #classe, #password
+  .logo
   {
-    color: white;
-    font-family:'Hind Vadodara', sans-serif;  
-  }
-
-  label
-  {
-    font-family:'Hind Vadodara', sans-serif;  
-  }
-  
-  .input-container .underline {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    background-color: #e5e5e5;
-    transform: scaleX(0);
-    transition: all 0.3s ease;
-  }
-  
-  .input-container input[type="text"]:focus ~ .underline,
-  .input-container input[type="text"]:valid ~ .underline {
-    transform: scaleX(1);
+    left:60%;
   }
 
-  .send
-  {
-    font-family:'Hind Vadodara', sans-serif;  
-    background-color: transparent;
-    border: solid 1px white;
-     color: white;
-     font-size: 30px;
-     width: 160px;
-     height: 55px;
-     position: absolute;
-     top: 65%;
-     left: 15%;
-  }
 
-  @media (max-width: 414px)
-  {
-    .image
-    {
-        visibility: hidden;
-    }
-
-    body{
-        background-image: url("img/WaitressOne.png");
-        /* Da rivedere */
-        background-position: top; 
-        overflow: hidden;
-        align-items: center;
-        
-    }
-
-    .box
-    {
-        position: relative;
-        top: 150px;
-        height: 68%;
-        width: 95%;
-        position: absolute;
-        right: 2.5%;
-    }
-
-    .logo
-    {
-        position: absolute;
-        left:60%;
-    }
-  }
-  
+}

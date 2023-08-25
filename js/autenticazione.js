@@ -6,6 +6,17 @@ function send()
     if(verifica(classe, password))
     {
         location.assign("prenotazione.html");
+    }else
+    {
+        document.getElementById("send").animate([
+            // keyframes
+            { transform: 'translateX(4px)' },
+            { transform: 'translateX(-4px)' }
+          ], {
+            // timing options
+            duration: 200,
+            iterations: 2
+          });
     }
 
     
