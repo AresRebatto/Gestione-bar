@@ -29,11 +29,25 @@ h1{
 
 .box
 {
-  background: linear-gradient(115deg, #3F2A21 0%, #4d220e 100%);
+  background: linear-gradient(115deg, #7c503c 0%, #4d220e 100%); 
   width: 100%;
   height: 1000px;
   margin-top: -2%;
   margin-left: -0.5%;
+  background-size: 400% 400%;
+	animation: gradient 30s ease infinite;
+}
+
+@keyframes gradient{
+  0%{
+    background-position: 0% 50%; 
+  }
+  50%{
+    background-position: 50% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
 }
 .input-container {
   position: relative;
@@ -52,7 +66,8 @@ h1{
   top: 16%;
 }
 
-.input-container input[type="text"] {
+.input-container input[type="text"],
+.input-container input[type="password"]{
   font-size: 20px;
   width: 100%;
   border: none;
@@ -73,7 +88,9 @@ h1{
 }
 
 .input-container input[type="text"]:focus ~ .label,
-.input-container input[type="text"]:valid ~ .label {
+.input-container input[type="text"]:valid ~ .label,
+.input-container input[type="password"]:focus ~ .label,
+.input-container input[type="password"]:valid ~ .label {
   top: -20px;
   font-size: 16px;
   color: #e5e5e5;
@@ -102,7 +119,9 @@ label
 }
 
 .input-container input[type="text"]:focus ~ .underline,
-.input-container input[type="text"]:valid ~ .underline {
+.input-container input[type="text"]:valid ~ .underline,
+.input-container input[type="password"]:focus ~ .underline,
+.input-container input[type="password"]:valid ~ .underline {
   transform: scaleX(1);
 }
 

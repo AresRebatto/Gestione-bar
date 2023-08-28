@@ -13,6 +13,8 @@
 </head>
 <body>
     <h1 class="header">SIEDITI E ORDINA</h1>
+    <img src="style/img/right-arrow.png" class="LeftArrow" id="leftArrow" alt="">
+    <img src="style/img/right-arrow.png" class="RightArrow" id="rightArrow" alt="">
     <a href="index.html"><img src="style/img/LogoWB.png" alt="" height="150" class="logo"></a>
     <!-- Ancora da aggiungere logo per redirect home -->
     <table class="main-table"cellspacing="70" align="center" >
@@ -37,13 +39,13 @@
                     <button>+</button>
                 </div>
             </td>
-            <td>
-                <img src="style/img/Focaccia.jpg" alt="" height="120" class="images">
-                <p class="food">Focaccia</p>
-                <p class="prize">1.70€</p>
+            <td id="focacciaS">
+                <img src="style/img/FocacciaSalame.jpg" alt="" height="120" class="images">
+                <p class="focacciaSalame">Focaccia Salame</p>
+                <p class="prize" id="FocacciaSPrize">1.70€</p>
                 <div class="select">
-                    <button>-</button>
-                    <p class="qnt">0</p>
+                    <button onclick="lessFocacciaS()">-</button>
+                    <p class="qnt" id="qntFocacciaS">0</p>
                     <button>+</button>
                 </div>
             </td>
