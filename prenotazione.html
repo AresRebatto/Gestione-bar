@@ -22,68 +22,75 @@
             <td id="focaccia">
                 <img src="style/img/Focaccia.jpg" alt="" height="120" class="images">
                 <p class="food">Focaccia</p>
-                <p class="prize" id="FocacciaPrize">1.00€</p>
+                <p class="prize">1.00€</p>
                 <div class="select">
-                    <button onclick="lessFocaccia()">-</button>
+                    <button class="btn" onclick="lessFocaccia()">-</button>
                     <p class="qnt" id="qntFocaccia">0</p>
-                    <button>+</button>
+                    <button class="btn">+</button>
                 </div>
             </td>
             <td id="HotDog">
                 <img src="style/img/Hotdog.jpg" alt="" height="120" class="images">
                 <p class="food">Hot-Dog</p>
-                <p class="prize" id="HotDogPrize">1.70€</p>
+                <p class="prize">1.70€</p>
                 <div class="select">
-                    <button onclick="lessHotDog()">-</button>
+                    <button class="btn" onclick="lessHotDog()">-</button>
                     <p class="qnt" id="qntHotDog">0</p>
-                    <button>+</button>
+                    <button class="btn">+</button>
                 </div>
             </td>
             <td id="focacciaS">
                 <img src="style/img/FocacciaSalame.jpg" alt="" height="120" class="images">
                 <p class="focacciaSalame">Focaccia Salame</p>
-                <p class="prize" id="FocacciaSPrize">1.70€</p>
+                <p class="prize">1.70€</p>
                 <div class="select">
-                    <button onclick="lessFocacciaS()">-</button>
+                    <button class="btn" onclick="lessFocacciaS()">-</button>
                     <p class="qnt" id="qntFocacciaS">0</p>
-                    <button>+</button>
+                    <button class="btn">+</button>
                 </div>
             </td>
         </tr>
         <tr>
-            <td>
-                <img src="style/img/Focaccia.jpg" alt="" height="120" class="images">
-                <p class="food">Focaccia</p>
+            <td id="BoxFocacciaC">
+                <img src="style/img/FocacciaCotto.jpg" alt="" height="120" class="images">
+                <p class="food">Focaccia Cotto</p>
                 <p class="prize">1.70€</p>
                 <div class="select">
-                    <button>-</button>
-                    <p class="qnt">0</p>
-                    <button>+</button>
+                    <button class="btn" onclick="lessFocacciaC()">-</button>
+                    <p class="qnt" id="qntFocacciaC">0</p>
+                    <button class="btn">+</button>
                 </div>
             </td>
-            <td>
-                <img src="style/img/Focaccia.jpg" alt="" height="120" class="images">
-                <p class="food">Focaccia</p>
+            <td id="BoxFocacciaM">
+                <img src="style/img/FocacciaMotadella.jpg" alt="" height="120" class="images">
+                <p class="food">Focaccia Mortadella</p>
                 <p class="prize">1.70€</p>
                 <div class="select">
-                    <button>-</button>
-                    <p class="qnt">0</p>
-                    <button>+</button>
+                    <button class="btn" onclick="lessFocacciaM()">-</button>
+                    <p class="qnt" id="qntFocacciaM">0</p>
+                    <button class="btn">+</button>
                 </div>
             </td>
-            <td>
-                <img src="style/img/Focaccia.jpg" alt="" height="120" class="images">
-                <p class="food">Focaccia</p>
-                <p class="prize">1.70€</p>
+            <td id="BoxCotoletta">
+                <img src="style/img/Cotoletta.jpeg" alt="" height="120" class="images">
+                <p class="food">Panino cotoletta</p>
+                <p class="prize">2.00€</p>
                 <div class="select">
-                    <button>-</button>
-                    <p class="qnt">0</p>
-                    <button>+</button>
+                    <button class="btn" onclick="lessCotoletta()">-</button>
+                    <p class="qnt" id="qntCotoletta">0</p>
+                    <button class="btn">+</button>
                 </div>
             </td>
         </tr>
     </table>
+    <button class="conferma" onclick="ConfermaOrdine()">Conferma ordine</button>
+    <div class="cover" id="cover"></div>
+    <div class="popUp" id="popup">
+        <p class="popUptext">Ordine Riuscito <br>L'importo totale è di:</p>
+        <p class="prezzoTotale" id="costoTotale"></p>
 
+        <button class="homeButton" onclick="home()">Torna alla home</button>
+    </div>
     <script src="js/ordinazione.js"></script>
 </body>
 </html>

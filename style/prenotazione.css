@@ -66,7 +66,8 @@ td:hover
     margin-bottom: -5px;
 }
 
-button{
+
+.btn {
     background-color: transparent;
     border: none;
     font-weight: 1000;
@@ -75,7 +76,7 @@ button{
     top: 17px;
 }
 
-button:hover{
+.btn:hover{
     background-color: rgba(255, 255, 255, 0.4);
 }
 
@@ -111,4 +112,65 @@ button:hover{
     font-size: 23px;
     position: relative;
     left: 17%;
+}
+
+.conferma{
+    position: absolute;
+    right: 3%;
+    top: 94%;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 16px;
+    border: none;
+    height: 30px;
+    width: 170px;
+    font-family: 'Hind Vadodara', sans-serif; 
+
+}
+
+.conferma:hover{
+    background-color: rgb(189, 189, 189);
+}
+
+.cover{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+}
+
+.popUp{
+    position:absolute;
+    background-color: white;
+    top: 30%;
+    left: 30%;
+    height: 40%;
+    width: 40%;
+    text-align: center;
+    visibility: hidden;
+}
+
+.popUptext, 
+.prezzoTotale{
+    font-family: 'Hind Vadodara', sans-serif; 
+    position: relative;
+    top: 13%;
+
+}
+
+.homeButton{
+    background-color: rgb(187, 187, 255);
+    border: none;
+    border-radius: 16px;
+    height: 40px;
+    width: 160px;
+    position: relative;
+    top: 25%;
+    left: 25%;
+}
+
+.homeButton:hover{
+    background-color: rgb(167, 167, 242);
 }
