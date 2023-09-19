@@ -17,7 +17,7 @@
     <img src="style/img/right-arrow.png" class="RightArrow" id="rightArrow" alt="">
     <a href="index.html"><img src="style/img/LogoWB.png" alt="" height="150" class="logo"></a>
     <!-- Ancora da aggiungere logo per redirect home -->
-    <table class="main-table"cellspacing="70" align="center" >
+    <table class="main-table"cellspacing="70" align="center" id="FrstTable">
         <tr>
             <td id="focaccia">
                 <img src="style/img/Focaccia.jpg" alt="" height="120" class="images">
@@ -83,6 +83,74 @@
             </td>
         </tr>
     </table>
+    <!-- Seconda tabella -->
+    <table class="second-table"cellspacing="70" align="center" id="scndTable">
+        <tr>
+            <td id="focaccia">
+                <img src="style/img/Focaccia.jpg" alt="" height="120" class="images">
+                <p class="food">Focaccia</p>
+                <p class="prize">1.00€</p>
+                <div class="select">
+                    <button class="btn" onclick="lessFocaccia()">-</button>
+                    <p class="qnt" id="qntFocaccia">0</p>
+                    <button class="btn">+</button>
+                </div>
+            </td>
+            <td id="HotDog">
+                <img src="style/img/Hotdog.jpg" alt="" height="120" class="images">
+                <p class="food">Hot-Dog</p>
+                <p class="prize">1.70€</p>
+                <div class="select">
+                    <button class="btn" onclick="lessHotDog()">-</button>
+                    <p class="qnt" id="qntHotDog">0</p>
+                    <button class="btn">+</button>
+                </div>
+            </td>
+            <td id="focacciaS">
+                <img src="style/img/FocacciaSalame.jpg" alt="" height="120" class="images">
+                <p class="focacciaSalame">Focaccia Salame</p>
+                <p class="prize">1.70€</p>
+                <div class="select">
+                    <button class="btn" onclick="lessFocacciaS()">-</button>
+                    <p class="qnt" id="qntFocacciaS">0</p>
+                    <button class="btn">+</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td id="BoxFocacciaC">
+                <img src="style/img/FocacciaCotto.jpg" alt="" height="120" class="images">
+                <p class="food">Focaccia Cotto</p>
+                <p class="prize">1.70€</p>
+                <div class="select">
+                    <button class="btn" onclick="lessFocacciaC()">-</button>
+                    <p class="qnt" id="qntFocacciaC">0</p>
+                    <button class="btn">+</button>
+                </div>
+            </td>
+            <td id="BoxFocacciaM">
+                <img src="style/img/FocacciaMotadella.jpg" alt="" height="120" class="images">
+                <p class="food">Focaccia Mortadella</p>
+                <p class="prize">1.70€</p>
+                <div class="select">
+                    <button class="btn" onclick="lessFocacciaM()">-</button>
+                    <p class="qnt" id="qntFocacciaM">0</p>
+                    <button class="btn">+</button>
+                </div>
+            </td>
+            <td id="BoxCotoletta">
+                <img src="style/img/Cotoletta.jpeg" alt="" height="120" class="images">
+                <p class="food">Panino cotoletta</p>
+                <p class="prize">2.00€</p>
+                <div class="select">
+                    <button class="btn" onclick="lessCotoletta()">-</button>
+                    <p class="qnt" id="qntCotoletta">0</p>
+                    <button class="btn">+</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+
     <button class="conferma" onclick="ConfermaOrdine()">Conferma ordine</button>
     <div class="cover" id="cover"></div>
     <div class="popUp" id="popup">

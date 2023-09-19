@@ -174,3 +174,14 @@ td:hover
 .homeButton:hover{
     background-color: rgb(167, 167, 242);
 }
+
+.second-table{
+    width: 70%;
+    height: 820px;
+    vertical-align: middle;
+    position: absolute;
+    top: 0px;
+    left: 14.8%;
+    top: 0.2%;
+    visibility: hidden;
+}

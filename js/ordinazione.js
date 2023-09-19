@@ -2,12 +2,15 @@ const costoFocacce = 1.70; //Anche HotDog
 const costoFocaccia = 1.0;
 const cotoletta = 2.00;
 
+let tableOne = document.getElementById("FrstTable");
+let tableTwo = document.getElementById("scndTable");
 //Frecce
 let dx = document.getElementById("rightArrow");
 let sx = document.getElementById("leftArrow");
 
 //Focaccia
-let focacciaNum = document.getElementById("qntFocaccia");
+let focacciaNumOut = document.getElementById("qntFocaccia");
+let focacciaNum = 0;
 let boxFocaccia = document.getElementById("focaccia");
 
 
@@ -32,25 +35,18 @@ let boxFocacciaM = document.getElementById("BoxFocacciaM");
 let cotolettaNum = document.getElementById("qntCotoletta");
 let boxCotoletta = document.getElementById("BoxCotoletta");
 
-//Funzioni frecce
-dx.onclick=function(){
-  //Ancora da scrivere le tabelle che poi andranno al posto
-  //della main-table
-}
-
-sx.onclick=function(){
-  //Ancora da scrivere le tabelle che poi andranno al posto
-  //della main-table
-}
 
 //Funzioni focaccia
 boxFocaccia.onclick=function() {
-    focacciaNum.innerHTML++;
+  focacciaNumOut.innerHTML++;
+  focacciaNum =  document.getElementById("qntFocaccia").value;
+  console.log(focacciaNum);
 };
 
 function lessFocaccia()
 {
-  focacciaNum.innerHTML-= 2;
+  focacciaNumOut.innerHTML-= 2;
+  focacciaNum =  document.getElementById("qntFocaccia").value;
 }
 
 //funzioni Hot-Dog
@@ -106,11 +102,25 @@ function ConfermaOrdine()
 {
   document.getElementById("cover").style.visibility = "visible";
   document.getElementById("popup").style.visibility = "visible";
-  let totale = focacciaNum*costoFocaccia+hotdogNum*costoFocacce+focacciaSalameNum*costoFocacce+focacciaCottoNum*costoFocacce+focacciaMortNum*costoFocacce+cotolettaNum*cotoletta;
+  let totale = focacciaNum*costoFocaccia;
   document.getElementById("costoTotale").innerHTML= parseFloat(totale);
 }
 
 function home()
 {
   location.assign("index.html");
+}
+
+dx.onclick = function()
+{
+
+  tableOne.style.visibility = "hidden";
+  tableTwo.style.visibility = "visible";
+}
+
+sx.onclick = function()
+{
+
+  tableOne.style.visibility = "visible";
+  tableTwo.style.visibility = "hidden";
 }
