@@ -2,6 +2,14 @@ const costoFocacce = 1.70; //Anche HotDog
 const costoFocaccia = 1.0;
 const cotoletta = 2.00;
 
+function ReturnPrize(objId)
+{
+  let strn = document.getElementById(objId).value;
+  return strn.substring(0,2);
+  // let chr = strn.split('');
+  // return chr[0]+chr[1]+chr[2];
+}
+
 let tableOne = document.getElementById("FrstTable");
 let tableTwo = document.getElementById("scndTable");
 //Frecce
@@ -9,9 +17,12 @@ let dx = document.getElementById("rightArrow");
 let sx = document.getElementById("leftArrow");
 
 //Focaccia
-let focacciaNumOut = document.getElementById("qntFocaccia");
-let focacciaNum = 0;
+let focacciaNum = document.getElementById("qntFocaccia").value;
 let boxFocaccia = document.getElementById("focaccia");
+
+let alimenti = {
+  focaccia : [document.getElementById("qntFocaccia"), 1.00, ReturnPrize("qntFocaccia")]
+};
 
 
 //Hot-dog
@@ -38,15 +49,13 @@ let boxCotoletta = document.getElementById("BoxCotoletta");
 
 //Funzioni focaccia
 boxFocaccia.onclick=function() {
-  focacciaNumOut.innerHTML++;
-  focacciaNum =  document.getElementById("qntFocaccia").value;
-  console.log(focacciaNum);
+  alimenti.focaccia[0].innerHTML++;
+  console.log(alimenti.focaccia[2]);
 };
 
 function lessFocaccia()
 {
-  focacciaNumOut.innerHTML-= 2;
-  focacciaNum =  document.getElementById("qntFocaccia").value;
+  focacciaNum.innerHTML-= 2;
 }
 
 //funzioni Hot-Dog
