@@ -164,15 +164,26 @@ function ConfermaOrdine()
   document.getElementById("cover").style.visibility = "visible";
   document.getElementById("popup").style.visibility = "visible";
   let totale = 0.0;
-  document.cookie="start";
+  let body = "NUOVO ORDINE %0A";
+  //Probabilmente da rimuovere
   for (var chiave in alimenti) {
+    
     if (alimenti.hasOwnProperty(chiave)) {
       totale += alimenti[chiave][1]*parseFloat(alimenti[chiave][0].textContent);
-      document.cookie
+      if(alimenti[chiave][0].textContent>0)
+      {        
+        body+= chiave + ": ";
+        body += alimenti[chiave][0].textContent+"%0A";
+      }    
     }
   }
-
   document.getElementById("costoTotale").innerHTML= totale+"€";
+  let sub = "Nuovo ordine da: " + document.cookie;
+  console.log(sub);
+  body += "%0APer un totale di " + totale + "€";
+  window.location.href = "mailto:aresrebatt@gmail.com?subject="+sub+"&body="+body;
+  document.cookie = "NoReturn";
+  
 }
 
 function home()
