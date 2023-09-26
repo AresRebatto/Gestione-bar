@@ -1,5 +1,4 @@
-document.cookie= "document.cookie = nome_del_cookie=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-
+console.log(document.cookie);
 
 //Tabelle
 let tableOne = document.getElementById("FrstTable");
@@ -164,15 +163,16 @@ function ConfermaOrdine()
 {
   document.getElementById("cover").style.visibility = "visible";
   document.getElementById("popup").style.visibility = "visible";
-  let totale = 0;
-  for(let key in alimenti)
-  {
-    totale += parseFloat(alimenti[key][0])*alimenti[key][1];
-    document.cookie += key+";"+alimenti[key][0]+"\n";
+  let totale = 0.0;
+  document.cookie="start";
+  for (var chiave in alimenti) {
+    if (alimenti.hasOwnProperty(chiave)) {
+      totale += alimenti[chiave][1]*parseFloat(alimenti[chiave][0].textContent);
+      document.cookie
+    }
   }
 
-  console.log(document.cookie);
-  document.getElementById("costoTotale").innerHTML= totale;
+  document.getElementById("costoTotale").innerHTML= totale+"€";
 }
 
 function home()
