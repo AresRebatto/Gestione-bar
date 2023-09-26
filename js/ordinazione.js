@@ -36,8 +36,70 @@ let alimenti = {
   focacciaMort: [document.getElementById("qntFocacciaM"), 1.70],
   cotoletta: [document.getElementById("qntCotoletta"), 2.00],
   //Seconda tabella
+  focacciaCrudo:[document.getElementById("qntFocacciaCrudo"), 2.00],
+  focacciaCF: [document.getElementById("qntFCF"), 2.00],
+  focacciaSF:[document.getElementById("qntFSF"), 2.00],
+  paninoSalame: [document.getElementById("qntPS"), 1.40],
+  paninoCotto: [document.getElementById("qntPC"), 1.70],
+  paninoMortadella: [document.getElementById("qntPM"), 2.00],
+
+};
+//funzioni panino mortadella
+boxPM.onclick=function(){
+  alimenti.paninoMortadella[0].innerHTML++;
 };
 
+function lessPM()
+{
+  alimenti.paninoMortadella[0].innerHTML -= 2;
+}
+//funzioni Panino cotto
+boxPC.onclick=function(){
+  alimenti.paninoCotto[0].innerHTML++;
+};
+
+function lessPC()
+{
+  alimenti.paninoCotto[0].innerHTML -= 2;
+}
+//Funzioni panino e salame
+boxPS.onclick=function()
+{
+  alimenti.paninoSalame[0].innerHTML++;
+};
+
+function lessPS()
+{
+  alimenti.paninoSalame[0].innerHTML-=2;
+}
+//funzioni focaccia salame e formaggio
+boxFSF.onclick=function() {
+  alimenti.focacciaSF[0].innerHTML++;
+};
+
+function lessFSF()
+{
+  alimenti.focacciaSF[0].innerHTML-=2;
+}
+
+//Funzioni Focaccia Cotto e formaggio
+boxFCF.onclick=function() {
+  alimenti.focacciaCF[0].innerHTML++;
+};
+
+function lessFCF()
+{
+  alimenti.focacciaCF[0].innerHTML-=2;
+}
+//Funzioni focaccia crudo
+boxFocacciaCrudo.onclick=function() {
+  alimenti.focacciaCrudo[0].innerHTML++;
+};
+
+function lessFC()
+{
+  alimenti.focacciaCrudo[0].innerHTML-=2;
+}
 
 //Funzioni focaccia
 boxFocaccia.onclick=function() {
