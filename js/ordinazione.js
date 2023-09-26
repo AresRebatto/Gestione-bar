@@ -1,28 +1,43 @@
+document.cookie= "document.cookie = nome_del_cookie=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+
 //Tabelle
 let tableOne = document.getElementById("FrstTable");
 let tableTwo = document.getElementById("scndTable");
 
+classe = document.cookie;
 //Frecce
 let dx = document.getElementById("rightArrow");
 let sx = document.getElementById("leftArrow");
 
 //Box alimenti
+  //Prima tabella
 let boxFocaccia = document.getElementById("focaccia");
 let boxHotdog = document.getElementById("HotDog");
 let boxFocacciaSalame = document.getElementById("focacciaS");
 let boxFocacciaC = document.getElementById("BoxFocacciaC");
 let boxFocacciaM = document.getElementById("BoxFocacciaM");
 let boxCotoletta = document.getElementById("BoxCotoletta");
+  //Seconda tabella
+let boxFocacciaCrudo = document.getElementById("FocacciaCrudo");
+let boxFCF = document.getElementById("FCF");
+let boxFSF = document.getElementById("FSF");
+let boxPS = document.getElementById("PS");
+let boxPC = document.getElementById("PC");
+let boxPM = document.getElementById("PM");
 
 
 let alimenti = {
+  //Prima tabella
   focaccia : [document.getElementById("qntFocaccia"), 1.00],
   hotdog: [ document.getElementById("qntHotDog"), 1.70],
   focacciaSalame: [document.getElementById("qntFocacciaS"), 1.70],
   focacciaCotto: [document.getElementById("qntFocacciaC"), 1.70],
   focacciaMort: [document.getElementById("qntFocacciaM"), 1.70],
   cotoletta: [document.getElementById("qntCotoletta"), 2.00],
+  //Seconda tabella
 };
+
 
 //Funzioni focaccia
 boxFocaccia.onclick=function() {
@@ -88,10 +103,13 @@ function ConfermaOrdine()
   document.getElementById("cover").style.visibility = "visible";
   document.getElementById("popup").style.visibility = "visible";
   let totale = 0;
-  for(let [key, value] of Object.entries(alimenti))
+  for(let key in alimenti)
   {
-    totale += value[0]*value[1];
+    totale += parseFloat(alimenti[key][0])*alimenti[key][1];
+    document.cookie += key+";"+alimenti[key][0]+"\n";
   }
+
+  console.log(document.cookie);
   document.getElementById("costoTotale").innerHTML= totale;
 }
 

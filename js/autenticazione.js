@@ -25,6 +25,9 @@ function send()
 function verifica(classe, password)
 {
     if(classe == "3H" && password == "1234")
+    {
+        document.cookie = classe;
         return true;
+    }
     else return false;
 }
