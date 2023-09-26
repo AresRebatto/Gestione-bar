@@ -50,7 +50,11 @@ boxPM.onclick=function(){
 
 function lessPM()
 {
-  alimenti.paninoMortadella[0].innerHTML -= 2;
+  if(alimenti.paninoMortadella[0].textContent > 0)
+    alimenti.paninoMortadella[0].innerHTML -= 2;
+  else
+  alimenti.paninoMortadella[0].innerHTML --;
+
 }
 //funzioni Panino cotto
 boxPC.onclick=function(){
@@ -59,7 +63,10 @@ boxPC.onclick=function(){
 
 function lessPC()
 {
-  alimenti.paninoCotto[0].innerHTML -= 2;
+  if (alimenti.paninoCotto[0].textContent > 0)
+    alimenti.paninoCotto[0].innerHTML -= 2;
+  else 
+    alimenti.paninoCotto[0].innerHTML--;
 }
 //Funzioni panino e salame
 boxPS.onclick=function()
@@ -69,7 +76,10 @@ boxPS.onclick=function()
 
 function lessPS()
 {
-  alimenti.paninoSalame[0].innerHTML-=2;
+  if(alimenti.paninoSalame[0].textContent > 0)
+    alimenti.paninoSalame[0].innerHTML-=2;
+  else
+    alimenti.paninoSalame[0].innerHTML--;
 }
 //funzioni focaccia salame e formaggio
 boxFSF.onclick=function() {
@@ -78,7 +88,10 @@ boxFSF.onclick=function() {
 
 function lessFSF()
 {
-  alimenti.focacciaSF[0].innerHTML-=2;
+  if(alimenti.focacciaSF[0].textContent > 0)
+    alimenti.focacciaSF[0].innerHTML-=2;
+  else
+    alimenti.focacciaSF[0].innerHTML--;
 }
 
 //Funzioni Focaccia Cotto e formaggio
@@ -88,7 +101,10 @@ boxFCF.onclick=function() {
 
 function lessFCF()
 {
-  alimenti.focacciaCF[0].innerHTML-=2;
+  if(alimenti.focacciaCF[0].textContent > 0)
+    alimenti.focacciaCF[0].innerHTML-=2;
+  else 
+    alimenti.focacciaCF[0].innerHTML--;
 }
 //Funzioni focaccia crudo
 boxFocacciaCrudo.onclick=function() {
@@ -97,7 +113,10 @@ boxFocacciaCrudo.onclick=function() {
 
 function lessFC()
 {
-  alimenti.focacciaCrudo[0].innerHTML-=2;
+  if(alimenti.focacciaCrudo[0].textContent > 0)
+    alimenti.focacciaCrudo[0].innerHTML-=2;
+  else
+  alimenti.focacciaCrudo[0].innerHTML--;
 }
 
 //Funzioni focaccia
@@ -107,7 +126,10 @@ boxFocaccia.onclick=function() {
 
 function lessFocaccia()
 {
-  alimenti.focaccia[0].innerHTML-=2;
+  if(alimenti.focaccia[0].textContent > 0)
+    alimenti.focaccia[0].innerHTML-=2;
+  else
+    alimenti.focaccia[0].innerHTML--;
 }
 
 //funzioni Hot-Dog
@@ -117,7 +139,10 @@ boxHotdog.onclick=function() {
 
 function lessHotDog()
 {
-  alimenti.hotdog[0].innerHTML-=2;
+  if(alimenti.hotdog[0].textContent > 0)
+    alimenti.hotdog[0].innerHTML-=2;
+  else
+    alimenti.hotdog[0].innerHTML--;
 }
 
 //Funzioni focaccia salame
@@ -126,7 +151,10 @@ boxFocacciaSalame.onclick=function(){
 }
 function lessFocacciaS()
 {
-  alimenti.focacciaSalame[0].innerHTML-=2;
+  if(alimenti.focacciaSalame[0].textContent > 0)
+    alimenti.focacciaSalame[0].innerHTML-=2;
+  else
+    alimenti.focacciaSalame[0].innerHTML--;
 }
 
 //Funzioni focaccia cotto
@@ -136,7 +164,10 @@ boxFocacciaC.onclick=function() {
 
 function lessFocacciaC()
 {
-  alimenti.focacciaCotto[0].innerHTML-=2;
+  if(alimenti.focacciaCotto[0].textContent > 0)
+    alimenti.focacciaCotto[0].innerHTML-=2;
+  else
+    alimenti.focacciaCotto[0].innerHTML--;
 }
 
 //Funzioni focaccia mortadella
@@ -146,7 +177,10 @@ boxFocacciaM.onclick=function() {
 
 function lessFocacciaM()
 {
-  alimenti.focacciaMort[0].innerHTML-=2;
+  if(alimenti.focacciaMort[0].textContent > 0)
+    alimenti.focacciaMort[0].innerHTML-=2;
+  else
+    alimenti.focacciaMort[0].innerHTML--;
 }
 
 //Funzioni panino cotoletta
@@ -156,7 +190,10 @@ boxCotoletta.onclick=function() {
 
 function lessCotoletta()
 {
-  alimenti.cotoletta[0].innerHTML-=2;
+  if(alimenti.cotoletta[0].textContent > 0)
+    alimenti.cotoletta[0].innerHTML-=2;
+  else
+    alimenti.cotoletta[0].innerHTML--;
 }
 
 function ConfermaOrdine()

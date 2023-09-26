@@ -37,7 +37,10 @@ td:hover
 
 .images{
     position: relative;
-    left: 17%;
+    object-fit: cover;
+    height: 120px;
+    width: 150px;
+    left: 23%;
     top: 8%;
     border: 1px solid black;
 }
