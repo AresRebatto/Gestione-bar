@@ -18,7 +18,7 @@ body{
 }
 td{
     background-color: rgba(255, 255, 255, 0.4);
-    
+
 }
 
 td:hover
@@ -53,7 +53,7 @@ td:hover
 }
 
 .food{
-    font-family: 'Hind Vadodara', sans-serif; 
+    font-family: 'Hind Vadodara', sans-serif;
     font-weight: 1000;
     margin-bottom: -25px;
     font-size: 23px;
@@ -62,7 +62,7 @@ td:hover
 }
 
 .prize{
-    font-family: 'Hind Vadodara', sans-serif; 
+    font-family: 'Hind Vadodara', sans-serif;
     font-weight: 1000;
     position: relative;
     left: 40%;
@@ -109,7 +109,7 @@ td:hover
 }
 
 .focacciaSalame{
-    font-family: 'Hind Vadodara', sans-serif; 
+    font-family: 'Hind Vadodara', sans-serif;
     font-weight: 1000;
     margin-bottom: -25px;
     font-size: 23px;
@@ -126,7 +126,7 @@ td:hover
     border: none;
     height: 30px;
     width: 170px;
-    font-family: 'Hind Vadodara', sans-serif; 
+    font-family: 'Hind Vadodara', sans-serif;
 
 }
 
@@ -155,9 +155,9 @@ td:hover
     visibility: hidden;
 }
 
-.popUptext, 
+.popUptext,
 .prezzoTotale{
-    font-family: 'Hind Vadodara', sans-serif; 
+    font-family: 'Hind Vadodara', sans-serif;
     position: relative;
     top: 13%;
 
@@ -190,10 +190,21 @@ td:hover
 }
 
 .longTxt{
-    font-family: 'Hind Vadodara', sans-serif; 
+    font-family: 'Hind Vadodara', sans-serif;
     font-weight: 1000;
     margin-bottom: -25px;
     font-size: 23px;
     position: relative;
     left: 6%;
+}
+
+.third-table{
+    width: 70%;
+    height: 820px;
+    vertical-align: middle;
+    position: absolute;
+    top: 0px;
+    left: 14.8%;
+    top: 0.2%;
+    visibility: hidden;
 }
