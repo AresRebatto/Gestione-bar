@@ -1,8 +1,8 @@
-console.log(document.cookie);
-
 //Tabelle
 let tableOne = document.getElementById("FrstTable");
-let tableTwo = document.getElementById("scndTable");
+let tableTwo = document.getElementById("ScndTable");
+let tableThree = document.getElementById("TrdTable")
+let tableN = 1;
 
 classe = document.cookie;
 //Frecce
@@ -11,19 +11,70 @@ let sx = document.getElementById("leftArrow");
 
 //Box alimenti
   //Prima tabella
-let boxFocaccia = document.getElementById("focaccia");
-let boxHotdog = document.getElementById("HotDog");
-let boxFocacciaSalame = document.getElementById("focacciaS");
-let boxFocacciaC = document.getElementById("BoxFocacciaC");
-let boxFocacciaM = document.getElementById("BoxFocacciaM");
-let boxCotoletta = document.getElementById("BoxCotoletta");
+  let boxFocaccia = document.getElementById("focaccia");
+  let boxHotdog = document.getElementById("HotDog");
+  let boxFocacciaSalame = document.getElementById("focacciaS");
+  let boxFocacciaC = document.getElementById("BoxFocacciaC");
+  let boxFocacciaM = document.getElementById("BoxFocacciaM");
+  let boxCotoletta = document.getElementById("BoxCotoletta");
   //Seconda tabella
-let boxFocacciaCrudo = document.getElementById("FocacciaCrudo");
-let boxFCF = document.getElementById("FCF");
-let boxFSF = document.getElementById("FSF");
-let boxPS = document.getElementById("PS");
-let boxPC = document.getElementById("PC");
-let boxPM = document.getElementById("PM");
+  let boxFocacciaCrudo = document.getElementById("FocacciaCrudo");
+  let boxFCF = document.getElementById("FCF");
+  let boxFSF = document.getElementById("FSF");
+  let boxPS = document.getElementById("PS");
+  let boxPC = document.getElementById("PC");
+  let boxPM = document.getElementById("PM");
+  //Terza tabella
+  let boxPaninoCrudo = document.getElementById("PaninoCrudo");
+  let boxTCF = document.getElementById("TCF");
+  let boxToast = document.getElementById("Toast");
+  let boxCCM = document.getElementById("CCM");
+  let boxPizza = document.getElementById("Pizza");
+  let boxRPW = document.getElementById("RPW");
+
+//Funzione frecce
+dx.onclick = function()
+{
+  if (tableN <= 3)
+  {
+    if(tableN != 3)
+      tableN++;
+    
+      
+    if(tableN == 2){  
+      tableTwo.style.visibility = "visible";
+      tableOne.style.visibility = "hidden";
+    }
+    if(tableN == 3){
+      tableThree.style.visibility = "visible";
+      tableTwo.style.visibility = "hidden";
+    }
+      
+  }
+  
+  
+}
+
+sx.onclick = function()
+{
+
+  if (tableN <= 3)
+  {
+    if(tableN != 1)
+      tableN--;
+    
+    if(tableN == 1){  
+      tableTwo.style.visibility = "hidden";
+      tableOne.style.visibility = "visible";
+    }
+    if(tableN == 2){  
+      tableTwo.style.visibility = "visible";
+      tableThree.style.visibility = "hidden";
+    }
+    
+      
+  }
+}
 
 
 let alimenti = {
@@ -41,8 +92,88 @@ let alimenti = {
   paninoSalame: [document.getElementById("qntPS"), 1.40],
   paninoCotto: [document.getElementById("qntPC"), 1.70],
   paninoMortadella: [document.getElementById("qntPM"), 2.00],
+  //Terza tabella
+  paninoCrudo: [document.getElementById("qntPCrudo"), 1.60],
+  toastCottoFontina: [document.getElementById("qntTCF"), 2.00],
+  toast: [document.getElementById("qntToast"), 1.10],
+  ciabattaCrudoMozzarella: [document.getElementById("qntCCM"), 2.00],
+  pizzaMargherita: [document.getElementById("qntPizza"), 1.30],
+  rotoloWurstel: [document.getElementById("qntRPW"), 2.00],
 
 };
+//funziono rotolo Wurstel
+boxRPW.onclick = function(){
+  alimenti.rotoloWurstel[0].innerHTML++;
+}
+
+function lessRPW()
+{
+  if(alimenti.rotoloWurstel[0].textContent > 0)
+    alimenti.rotoloWurstel[0].innerHTML -= 2;
+  else
+  alimenti.rotoloWurstel[0].innerHTML --;
+}
+//funzioni pizza
+boxPizza.onclick = function(){
+  alimenti.pizzaMargherita[0].innerHTML++;
+}
+
+function lessPizza()
+{
+  if(alimenti.pizzaMargherita[0].textContent > 0)
+    alimenti.pizzaMargherita[0].innerHTML -= 2;
+  else
+  alimenti.pizzaMargherita[0].innerHTML --;
+}
+//funzioni Ciabatta Crudo Mozzarella
+boxCCM.onclick = function(){
+  alimenti.ciabattaCrudoMozzarella[0].innerHTML++;
+}
+
+function lessCCM()
+{
+  if(alimenti.ciabattaCrudoMozzarella[0].textContent > 0)
+    alimenti.ciabattaCrudoMozzarella[0].innerHTML -= 2;
+  else
+  alimenti.ciabattaCrudoMozzarella[0].innerHTML --;
+}
+//funzioni Toast
+boxToast.onclick = function()
+{
+  alimenti.toast[0].innerHTML++;
+}
+
+function lessToast()
+{
+  if(alimenti.toast[0].textContent > 0)
+    alimenti.toast[0].innerHTML -= 2;
+  else
+  alimenti.toast[0].innerHTML --;
+}
+//funzioni toast Cotto e Fontina
+boxTCF.onclick=function(){
+  alimenti.toastCottoFontina[0].innerHTML++;
+}
+
+function lessTCF()
+{
+  if(alimenti.toastCottoFontina[0].textContent > 0)
+    alimenti.toastCottoFontina[0].innerHTML -= 2;
+  else
+  alimenti.toastCottoFontina[0].innerHTML --;
+}
+//funzione panino Crudo
+boxPaninoCrudo.onclick=function(){
+  alimenti.paninoCrudo[0].innerHTML++;
+}
+
+function lessPaninoCrudo()
+{
+  if(alimenti.paninoCrudo[0].textContent > 0)
+    alimenti.paninoCrudo[0].innerHTML -= 2;
+  else
+  alimenti.paninoCrudo[0].innerHTML --;
+}
 //funzioni panino mortadella
 boxPM.onclick=function(){
   alimenti.paninoMortadella[0].innerHTML++;
@@ -226,18 +357,4 @@ function ConfermaOrdine()
 function home()
 {
   location.assign("index.html");
-}
-
-dx.onclick = function()
-{
-
-  tableOne.style.visibility = "hidden";
-  tableTwo.style.visibility = "visible";
-}
-
-sx.onclick = function()
-{
-
-  tableOne.style.visibility = "visible";
-  tableTwo.style.visibility = "hidden";
 }
