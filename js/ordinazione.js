@@ -1,7 +1,8 @@
 //Tabelle
 let tableOne = document.getElementById("FrstTable");
 let tableTwo = document.getElementById("ScndTable");
-let tableThree = document.getElementById("TrdTable")
+let tableThree = document.getElementById("TrdTable");
+let tableFour = document.getElementById("FrthTable");
 let tableN = 1;
 
 classe = document.cookie;
@@ -31,11 +32,18 @@ let sx = document.getElementById("leftArrow");
   let boxCCM = document.getElementById("CCM");
   let boxPizza = document.getElementById("Pizza");
   let boxRPW = document.getElementById("RPW");
+  //Quarta tabella
+  let boxRPS = document.getElementById("RPS");
+  let boxSoda = document.getElementById("LemonSoda");
+  let boxCoca = document.getElementById("Coca");
+  let boxFanta = document.getElementById("Fanta");
+  let boxTeL = document.getElementById("TeL");
+  let boxTeP = document.getElementById("TeP");
 
 //Funzione frecce
 dx.onclick = function()
 {
-  if (tableN <= 3)
+  if (tableN <= 4)
   {
     if(tableN != 3)
       tableN++;
@@ -49,6 +57,10 @@ dx.onclick = function()
       tableThree.style.visibility = "visible";
       tableTwo.style.visibility = "hidden";
     }
+    if(tableN == 4){
+      tableThree.style.visibility = "hidden";
+      tableFour.style.visibility = "visibile";
+    }
       
   }
   
@@ -58,7 +70,7 @@ dx.onclick = function()
 sx.onclick = function()
 {
 
-  if (tableN <= 3)
+  if (tableN <= 4)
   {
     if(tableN != 1)
       tableN--;
@@ -70,6 +82,9 @@ sx.onclick = function()
     if(tableN == 2){  
       tableTwo.style.visibility = "visible";
       tableThree.style.visibility = "hidden";
+    }if(tableN == 3){  
+      tableThree.style.visibility = "visible";
+      tableFour.style.visibility = "hidden";
     }
     
       
