@@ -195,10 +195,42 @@ td:hover
     margin-bottom: -25px;
     font-size: 23px;
     position: relative;
-    left: 6%;
+    left: -3%;
+    margin-top: 4%;
+}
+
+.longTxtV2{
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 1000;
+    margin-bottom: -25px;
+    font-size: 23px;
+    position: relative;
+    left: -2%;
 }
 
 .third-table{
+    width: 70%;
+    height: 820px;
+    vertical-align: middle;
+    position: absolute;
+    top: 0px;
+    left: 14.8%;
+    top: 0.2%;
+    visibility: hidden;
+}
+
+.fourth-table{
+    width: 70%;
+    height: 820px;
+    vertical-align: middle;
+    position: absolute;
+    top: 0px;
+    left: 14.8%;
+    top: 0.2%;
+    visibility: hidden;
+}
+
+.fifth-table{
     width: 70%;
     height: 820px;
     vertical-align: middle;

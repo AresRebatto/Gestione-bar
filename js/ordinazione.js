@@ -1,7 +1,9 @@
 //Tabelle
 let tableOne = document.getElementById("FrstTable");
 let tableTwo = document.getElementById("ScndTable");
-let tableThree = document.getElementById("TrdTable")
+let tableThree = document.getElementById("TrdTable");
+let tableFour = document.getElementById("FrthTable");
+let tableFive = document.getElementById("FthTable");
 let tableN = 1;
 
 classe = document.cookie;
@@ -31,13 +33,24 @@ let sx = document.getElementById("leftArrow");
   let boxCCM = document.getElementById("CCM");
   let boxPizza = document.getElementById("Pizza");
   let boxRPW = document.getElementById("RPW");
-
+  //Quarta tabella
+  let boxRPS = document.getElementById("RPS");
+  let boxSoda = document.getElementById("LemonSoda");
+  let boxCoca = document.getElementById("Coca");
+  let boxFanta = document.getElementById("Fanta");
+  let boxTeL = document.getElementById("TeL");
+  let boxTeP = document.getElementById("TeP");
+  //Quinta tabella
+  let boxChinotto = document.getElementById("Chinotto");
+  let boxCocaB = document.getElementById("CocaBottiglia");
+  let boxAcquaN = document.getElementById("AcquaN");
+  let boxAcquaF = document.getElementById("AcquaF");
 //Funzione frecce
 dx.onclick = function()
 {
-  if (tableN <= 3)
+  if (tableN <= 5)
   {
-    if(tableN != 3)
+    if(tableN != 5)
       tableN++;
     
       
@@ -49,6 +62,14 @@ dx.onclick = function()
       tableThree.style.visibility = "visible";
       tableTwo.style.visibility = "hidden";
     }
+    if(tableN == 4){
+      tableThree.style.visibility = "hidden";
+      tableFour.style.visibility = "visible";
+    }
+    if(tableN == 5){
+      tableFive.style.visibility = "visible";
+      tableFour.style.visibility = "hidden";
+    }
       
   }
   
@@ -58,7 +79,7 @@ dx.onclick = function()
 sx.onclick = function()
 {
 
-  if (tableN <= 3)
+  if (tableN <= 5)
   {
     if(tableN != 1)
       tableN--;
@@ -70,6 +91,13 @@ sx.onclick = function()
     if(tableN == 2){  
       tableTwo.style.visibility = "visible";
       tableThree.style.visibility = "hidden";
+    }if(tableN == 3){  
+      tableThree.style.visibility = "visible";
+      tableFour.style.visibility = "hidden";
+    }
+    if(tableN == 4){  
+      tableFive.style.visibility = "hidden";
+      tableFour.style.visibility = "visible";
     }
     
       
@@ -99,8 +127,139 @@ let alimenti = {
   ciabattaCrudoMozzarella: [document.getElementById("qntCCM"), 2.00],
   pizzaMargherita: [document.getElementById("qntPizza"), 1.30],
   rotoloWurstel: [document.getElementById("qntRPW"), 2.00],
-
+  //Quarta tabella
+  rotoloPiada:[document.getElementById("qntRPS"), 2.00],
+  lemonSoda:[document.getElementById("qntLemonSoda"), 1.10],
+  cocaCola:[document.getElementById("qntCoca"), 1.10],
+  aranciata:[document.getElementById("qntFanta"), 1.10],
+  teLimone:[document.getElementById("qntTeL"), 1.10],
+  tePesca:[document.getElementById("qntTeP"), 1.10],
+  //Quinta tabella
+  chinotto: [document.getElementById("qntChinotto"), 1.10],
+  cocaColaBottiglia: [document.getElementById("qntCocaB"), 1.80],
+  acquaNat: [document.getElementById("qntAcquaN"), 0.45],
+  acquaFriz: [document.getElementById("qntAcquaF"), 0.45]
 };
+//metodi acqua frizzante
+boxAcquaF.onclick = function(){
+  alimenti.acquaFriz[0].innerHTML++;
+}
+
+function lessAcquaF()
+{
+  if(alimenti.acquaFriz[0].textContent > 0)
+    alimenti.acquaFriz[0].innerHTML -= 2;
+  else
+  alimenti.acquaFriz[0].innerHTML --;
+}
+//metodi acqua naturale
+boxAcquaN.onclick = function(){
+  alimenti.acquaNat[0].innerHTML++;
+}
+
+function lessAcquaN()
+{
+  if(alimenti.acquaNat[0].textContent > 0)
+    alimenti.acquaNat[0].innerHTML -= 2;
+  else
+  alimenti.acquaNat[0].innerHTML --;
+}
+//metodi coca cola in bottiglia
+boxCocaB.onclick = function(){
+  alimenti.cocaColaBottiglia[0].innerHTML++;
+}
+
+function lessCocaB()
+{
+  if(alimenti.cocaColaBottiglia[0].textContent > 0)
+    alimenti.cocaColaBottiglia[0].innerHTML -= 2;
+  else
+  alimenti.cocaColaBottiglia[0].innerHTML --;
+}
+//metodi chinotto
+boxChinotto.onclick = function(){
+  alimenti.chinotto[0].innerHTML++;
+}
+
+function lessChinotto()
+{
+  if(alimenti.chinotto[0].textContent > 0)
+    alimenti.chinotto[0].innerHTML -= 2;
+  else
+  alimenti.chinotto[0].innerHTML --;
+}
+//metodi te pesca
+boxTeP.onclick = function(){
+  alimenti.tePesca[0].innerHTML++;
+}
+
+function lessTeP()
+{
+  if(alimenti.tePesca[0].textContent > 0)
+    alimenti.tePesca[0].innerHTML -= 2;
+  else
+  alimenti.tePesca[0].innerHTML --;
+}
+//metodi te limone
+boxTeL.onclick = function(){
+  alimenti.teLimone[0].innerHTML++;
+}
+
+function lessTeL()
+{
+  if(alimenti.teLimone[0].textContent > 0)
+    alimenti.teLimone[0].innerHTML -= 2;
+  else
+  alimenti.teLimone[0].innerHTML --;
+}
+//metodi aranciata
+boxFanta.onclick = function(){
+  alimenti.aranciata[0].innerHTML++;
+}
+
+function lessFanta()
+{
+  if(alimenti.aranciata[0].textContent > 0)
+    alimenti.aranciata[0].innerHTML -= 2;
+  else
+  alimenti.aranciata[0].innerHTML --;
+}
+//metodi coca cola
+boxCoca.onclick = function(){
+  alimenti.cocaCola[0].innerHTML++;
+}
+
+function lessCoca()
+{
+  if(alimenti.cocaCola[0].textContent > 0)
+    alimenti.cocaCola[0].innerHTML -= 2;
+  else
+  alimenti.cocaCola[0].innerHTML --;
+}
+//funzioni lemonSoda
+boxSoda.onclick = function(){
+  alimenti.lemonSoda[0].innerHTML++;
+}
+
+function lessLemonSoda()
+{
+  if(alimenti.lemonSoda[0].textContent > 0)
+    alimenti.lemonSoda[0].innerHTML -= 2;
+  else
+  alimenti.rotoloPiada[0].innerHTML --;
+}
+//funzioni rotolo Piada Salsiccia
+boxRPS.onclick = function(){
+  alimenti.rotoloPiada[0].innerHTML++;
+}
+
+function lessRPS()
+{
+  if(alimenti.rotoloPiada[0].textContent > 0)
+    alimenti.rotoloPiada[0].innerHTML -= 2;
+  else
+  alimenti.rotoloPiada[0].innerHTML --;
+}
 //funziono rotolo Wurstel
 boxRPW.onclick = function(){
   alimenti.rotoloWurstel[0].innerHTML++;
