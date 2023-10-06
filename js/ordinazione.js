@@ -45,7 +45,7 @@ dx.onclick = function()
 {
   if (tableN <= 4)
   {
-    if(tableN != 3)
+    if(tableN != 4)
       tableN++;
     
       
@@ -59,7 +59,7 @@ dx.onclick = function()
     }
     if(tableN == 4){
       tableThree.style.visibility = "hidden";
-      tableFour.style.visibility = "visibile";
+      tableFour.style.visibility = "visible";
     }
       
   }
@@ -114,7 +114,13 @@ let alimenti = {
   ciabattaCrudoMozzarella: [document.getElementById("qntCCM"), 2.00],
   pizzaMargherita: [document.getElementById("qntPizza"), 1.30],
   rotoloWurstel: [document.getElementById("qntRPW"), 2.00],
-
+  //Quarta tabella
+  rotoloPiada:[document.getElementById("qntRPS"), 2.00],
+  lemonSoda:[document.getElementById("qntLemonSoda"), 1.10],
+  cocaCola:[document.getElementById("qntCoca"), 1.10],
+  aranciata:[document.getElementById("qntFanta"), 1.10],
+  teLimone:[document.getElementById("qntTeL"), 1.10],
+  tePesca:[document.getElementById("qntTeP"), 1.10],
 };
 //funziono rotolo Wurstel
 boxRPW.onclick = function(){

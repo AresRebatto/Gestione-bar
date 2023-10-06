@@ -33,8 +33,6 @@ td:hover
     vertical-align: middle;
     position: relative;
     bottom: 80px;
-    /* Da rimuovere */
-    visibility: hidden; 
 }
 
 .images{
@@ -228,4 +226,5 @@ td:hover
     top: 0px;
     left: 14.8%;
     top: 0.2%;
+    visibility: hidden;
 }
