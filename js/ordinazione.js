@@ -3,6 +3,7 @@ let tableOne = document.getElementById("FrstTable");
 let tableTwo = document.getElementById("ScndTable");
 let tableThree = document.getElementById("TrdTable");
 let tableFour = document.getElementById("FrthTable");
+let tableFive = document.getElementById("FthTable");
 let tableN = 1;
 
 classe = document.cookie;
@@ -39,13 +40,17 @@ let sx = document.getElementById("leftArrow");
   let boxFanta = document.getElementById("Fanta");
   let boxTeL = document.getElementById("TeL");
   let boxTeP = document.getElementById("TeP");
-
+  //Quinta tabella
+  let boxChinotto = document.getElementById("Chinotto");
+  let boxCocaB = document.getElementById("CocaBottiglia");
+  let boxAcquaN = document.getElementById("AcquaN");
+  let boxAcquaF = document.getElementById("AcquaF");
 //Funzione frecce
 dx.onclick = function()
 {
-  if (tableN <= 4)
+  if (tableN <= 5)
   {
-    if(tableN != 4)
+    if(tableN != 5)
       tableN++;
     
       
@@ -61,6 +66,10 @@ dx.onclick = function()
       tableThree.style.visibility = "hidden";
       tableFour.style.visibility = "visible";
     }
+    if(tableN == 5){
+      tableFive.style.visibility = "visible";
+      tableFour.style.visibility = "hidden";
+    }
       
   }
   
@@ -70,7 +79,7 @@ dx.onclick = function()
 sx.onclick = function()
 {
 
-  if (tableN <= 4)
+  if (tableN <= 5)
   {
     if(tableN != 1)
       tableN--;
@@ -85,6 +94,10 @@ sx.onclick = function()
     }if(tableN == 3){  
       tableThree.style.visibility = "visible";
       tableFour.style.visibility = "hidden";
+    }
+    if(tableN == 4){  
+      tableFive.style.visibility = "hidden";
+      tableFour.style.visibility = "visible";
     }
     
       
@@ -121,7 +134,60 @@ let alimenti = {
   aranciata:[document.getElementById("qntFanta"), 1.10],
   teLimone:[document.getElementById("qntTeL"), 1.10],
   tePesca:[document.getElementById("qntTeP"), 1.10],
+  //Quinta tabella
+  chinotto: [document.getElementById("qntChinotto"), 1.10],
+  cocaColaBottiglia: [document.getElementById("qntCocaB"), 1.80],
+  acquaNat: [document.getElementById("qntAcquaN"), 0.45],
+  acquaFriz: [document.getElementById("qntAcquaF"), 0.45]
 };
+//metodi acqua frizzante
+boxAcquaF.onclick = function(){
+  alimenti.acquaFriz[0].innerHTML++;
+}
+
+function lessAcquaF()
+{
+  if(alimenti.acquaFriz[0].textContent > 0)
+    alimenti.acquaFriz[0].innerHTML -= 2;
+  else
+  alimenti.acquaFriz[0].innerHTML --;
+}
+//metodi acqua naturale
+boxAcquaN.onclick = function(){
+  alimenti.acquaNat[0].innerHTML++;
+}
+
+function lessAcquaN()
+{
+  if(alimenti.acquaNat[0].textContent > 0)
+    alimenti.acquaNat[0].innerHTML -= 2;
+  else
+  alimenti.acquaNat[0].innerHTML --;
+}
+//metodi coca cola in bottiglia
+boxCocaB.onclick = function(){
+  alimenti.cocaColaBottiglia[0].innerHTML++;
+}
+
+function lessCocaB()
+{
+  if(alimenti.cocaColaBottiglia[0].textContent > 0)
+    alimenti.cocaColaBottiglia[0].innerHTML -= 2;
+  else
+  alimenti.cocaColaBottiglia[0].innerHTML --;
+}
+//metodi chinotto
+boxChinotto.onclick = function(){
+  alimenti.chinotto[0].innerHTML++;
+}
+
+function lessChinotto()
+{
+  if(alimenti.chinotto[0].textContent > 0)
+    alimenti.chinotto[0].innerHTML -= 2;
+  else
+  alimenti.chinotto[0].innerHTML --;
+}
 //metodi te pesca
 boxTeP.onclick = function(){
   alimenti.tePesca[0].innerHTML++;
