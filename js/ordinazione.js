@@ -122,6 +122,78 @@ let alimenti = {
   teLimone:[document.getElementById("qntTeL"), 1.10],
   tePesca:[document.getElementById("qntTeP"), 1.10],
 };
+//metodi te pesca
+boxTeP.onclick = function(){
+  alimenti.tePesca[0].innerHTML++;
+}
+
+function lessTeP()
+{
+  if(alimenti.tePesca[0].textContent > 0)
+    alimenti.tePesca[0].innerHTML -= 2;
+  else
+  alimenti.tePesca[0].innerHTML --;
+}
+//metodi te limone
+boxTeL.onclick = function(){
+  alimenti.teLimone[0].innerHTML++;
+}
+
+function lessTeL()
+{
+  if(alimenti.teLimone[0].textContent > 0)
+    alimenti.teLimone[0].innerHTML -= 2;
+  else
+  alimenti.teLimone[0].innerHTML --;
+}
+//metodi aranciata
+boxFanta.onclick = function(){
+  alimenti.aranciata[0].innerHTML++;
+}
+
+function lessFanta()
+{
+  if(alimenti.aranciata[0].textContent > 0)
+    alimenti.aranciata[0].innerHTML -= 2;
+  else
+  alimenti.aranciata[0].innerHTML --;
+}
+//metodi coca cola
+boxCoca.onclick = function(){
+  alimenti.cocaCola[0].innerHTML++;
+}
+
+function lessCoca()
+{
+  if(alimenti.cocaCola[0].textContent > 0)
+    alimenti.cocaCola[0].innerHTML -= 2;
+  else
+  alimenti.cocaCola[0].innerHTML --;
+}
+//funzioni lemonSoda
+boxSoda.onclick = function(){
+  alimenti.lemonSoda[0].innerHTML++;
+}
+
+function lessLemonSoda()
+{
+  if(alimenti.lemonSoda[0].textContent > 0)
+    alimenti.lemonSoda[0].innerHTML -= 2;
+  else
+  alimenti.rotoloPiada[0].innerHTML --;
+}
+//funzioni rotolo Piada Salsiccia
+boxRPS.onclick = function(){
+  alimenti.rotoloPiada[0].innerHTML++;
+}
+
+function lessRPS()
+{
+  if(alimenti.rotoloPiada[0].textContent > 0)
+    alimenti.rotoloPiada[0].innerHTML -= 2;
+  else
+  alimenti.rotoloPiada[0].innerHTML --;
+}
 //funziono rotolo Wurstel
 boxRPW.onclick = function(){
   alimenti.rotoloWurstel[0].innerHTML++;
